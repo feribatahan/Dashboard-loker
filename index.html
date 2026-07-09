@@ -20,98 +20,10 @@ linear-gradient(135deg,#07111f,#0b1324 60%,#111827);color:var(--text)}
 .brandText{display:grid;gap:2px}.brandText span:first-child{font-size:15px;color:#fff}.brandText span:last-child{font-size:12px;color:var(--muted);font-weight:700}
 h1{font-size:34px;line-height:1.05;margin:0 0 8px;font-weight:850;letter-spacing:-.03em}
 .sub{color:var(--muted);font-size:14px} .badge{display:inline-flex;gap:8px;align-items:center;background:rgba(255,210,51,.13);border:1px solid rgba(255,210,51,.28);color:#ffe985;padding:8px 12px;border-radius:999px;font-weight:700;font-size:13px}
-/* === V2 PREMIUM VISUAL REFRESH === */
-.grid{display:grid;gap:18px}
-.kpis{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:22px}
-.card{
-  position:relative;
-  background:linear-gradient(180deg,rgba(255,255,255,.070),rgba(255,255,255,.030));
-  border:1px solid rgba(255,255,255,.13);
-  border-radius:24px;
-  padding:20px;
-  box-shadow:0 22px 70px rgba(0,0,0,.30), inset 0 1px 0 rgba(255,255,255,.08);
-  backdrop-filter:blur(14px);
-}
-.hero{
-  position:relative;
-  padding:10px 0 18px;
-}
-.hero:before{
-  content:"";
-  position:absolute;
-  inset:-28px -28px -4px -28px;
-  z-index:-1;
-  border-radius:0 0 34px 34px;
-  background:
-    linear-gradient(90deg, rgba(7,17,31,.88), rgba(7,17,31,.72), rgba(7,17,31,.92)),
-    url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1800&q=80');
-  background-size:cover;
-  background-position:center;
-  filter:saturate(1.08);
-}
-.kpi{
-  min-height:200px;
-  overflow:hidden;
-  isolation:isolate;
-  transform:translateY(0);
-  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-}
-.kpi:hover{
-  transform:translateY(-5px);
-  box-shadow:0 30px 90px rgba(0,0,0,.42), 0 0 0 1px rgba(255,210,51,.20) inset;
-  border-color:rgba(255,210,51,.28);
-}
-.kpi:before{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:-2;
-  background:
-    linear-gradient(135deg,rgba(7,17,31,.93),rgba(13,27,46,.58)),
-    var(--kpi-img);
-  background-size:cover;
-  background-position:center;
-  transform:scale(1.05);
-  filter:saturate(1.18) contrast(1.04);
-}
-.kpi:after{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:-1;
-  background:
-    radial-gradient(circle at 18% 16%, rgba(255,210,51,.36), transparent 28%),
-    radial-gradient(circle at 88% 84%, rgba(54,211,153,.25), transparent 34%),
-    linear-gradient(180deg, rgba(255,255,255,.08), transparent 55%);
-  backdrop-filter:blur(1.2px);
-}
-.kpi:nth-child(1){--kpi-img:url('https://images.unsplash.com/photo-1606761568499-6d2451b23c66?auto=format&fit=crop&w=1200&q=80')}
-.kpi:nth-child(2){--kpi-img:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80')}
-.kpi:nth-child(3){--kpi-img:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80')}
-.kpi:nth-child(4){--kpi-img:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80')}
-.kpi .label{
-  color:#dbe7f6;
-  font-size:14px;
-  font-weight:800;
-  letter-spacing:.01em;
-  margin-bottom:18px;
-  text-shadow:0 2px 16px rgba(0,0,0,.45);
-}
-.kpi .value{
-  font-size:46px;
-  font-weight:950;
-  letter-spacing:-.055em;
-  color:#fff;
-  text-shadow:0 6px 22px rgba(0,0,0,.55);
-}
-.kpi .hint{
-  margin-top:14px;
-  color:#d4e2f5;
-  font-size:13px;
-  font-weight:650;
-  text-shadow:0 2px 12px rgba(0,0,0,.45);
-}
-.good{color:#4bf0b4!important}.warn{color:#ffd233!important}.bad{color:var(--danger)}
+.grid{display:grid;gap:16px} .kpis{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:16px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 16px 50px rgba(0,0,0,.24);backdrop-filter:blur(10px)}
+.kpi .label{color:var(--muted);font-size:13px;margin-bottom:10px} .kpi .value{font-size:34px;font-weight:850;letter-spacing:-.03em} .kpi .hint{margin-top:8px;color:var(--muted);font-size:12px}
+.good{color:var(--accent2)} .warn{color:var(--accent)} .bad{color:var(--danger)}
 .dashboard{grid-template-columns:1.2fr .8fr;margin-bottom:16px} .chart-title{font-weight:800;margin:0 0 12px;font-size:16px}
 .rowbar{display:grid;grid-template-columns:125px 1fr 48px;gap:10px;align-items:center;margin:10px 0} .rowbar .name{font-size:13px;color:#dbe7f6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .track{height:12px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden} .fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),#ff9f1c)} .fill.green{background:linear-gradient(90deg,var(--accent2),#22c55e)} .fill.blue{background:linear-gradient(90deg,var(--blue),var(--purple))}
@@ -121,6 +33,25 @@ h1{font-size:34px;line-height:1.05;margin:0 0 8px;font-weight:850;letter-spacing
 .filters{display:grid;grid-template-columns:1.3fr repeat(3,.7fr);gap:10px;margin:0 0 12px} input,select{width:100%;padding:12px 13px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--text);outline:none} select option{background:#0d1b2e;color:#fff}
 .tableWrap{overflow:auto;max-height:560px;border-radius:18px;border:1px solid var(--line)} table{width:100%;border-collapse:collapse;font-size:13px;min-width:1180px} th{position:sticky;top:0;background:#10233b;color:#eaf2ff;text-align:left;padding:12px;border-bottom:1px solid var(--line);z-index:1} td{padding:11px 12px;border-bottom:1px solid rgba(255,255,255,.07);color:#d9e5f5;vertical-align:top} tr:hover td{background:rgba(255,255,255,.035)} .pill{padding:5px 9px;border-radius:999px;font-weight:700;font-size:12px;white-space:nowrap} .used{background:rgba(54,211,153,.14);color:#78f0c4;border:1px solid rgba(54,211,153,.22)} .empty{background:rgba(255,210,51,.14);color:#ffe985;border:1px solid rgba(255,210,51,.25)}
 .footer{color:var(--muted);font-size:12px;text-align:right;margin-top:10px} .stacked{display:grid;gap:8px} .floor{display:grid;grid-template-columns:100px 1fr 56px;gap:10px;align-items:center;margin:11px 0} .stack{height:18px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;display:flex} .sused{background:var(--accent2)} .sunused{background:var(--accent)}
+
+.actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:flex-end;margin-top:14px}
+.btn{border:1px solid var(--line);background:rgba(255,255,255,.07);color:var(--text);padding:10px 14px;border-radius:14px;font-weight:800;cursor:pointer;box-shadow:0 10px 28px rgba(0,0,0,.14);transition:.2s ease}
+.btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.11)}
+.btn.primary{background:linear-gradient(135deg,var(--accent),#ff9f1c);color:#07111f;border-color:rgba(255,210,51,.38)}
+.btn.secondary{background:linear-gradient(135deg,var(--blue),var(--purple));color:#fff;border-color:rgba(74,163,255,.35)}
+.btn.reset{background:rgba(255,107,107,.12);color:#ffd5d5;border-color:rgba(255,107,107,.28)}
+.toolbar{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.toolbar .sub{font-size:12px}
+@media print{
+  body{background:#fff!important;color:#111!important}
+  .actions,.filters,.footer{display:none!important}
+  .card{box-shadow:none!important;border:1px solid #ddd!important;background:#fff!important;color:#111!important;break-inside:avoid}
+  .brandText span:first-child,h1,.chart-title,td,th,.rowbar .name{color:#111!important}
+  .sub,.num,.legend{color:#333!important}
+  .tableWrap{max-height:none!important;overflow:visible!important}
+  th{background:#f3f4f6!important;color:#111!important}
+}
+
 @media(max-width:900px){.kpis,.dashboard,.two,.filters{grid-template-columns:1fr}.hero{display:block}h1{font-size:28px}}
 </style>
 </head>
@@ -174,7 +105,17 @@ h1{font-size:34px;line-height:1.05;margin:0 0 8px;font-weight:850;letter-spacing
   </div>
 
   <div class="card">
-    <p class="chart-title">Detail Data Loker</p>
+    <div class="toolbar">
+      <div>
+        <p class="chart-title">Detail Data Loker</p>
+        <div class="sub">Gunakan filter untuk mencari data, lalu reset atau export sesuai kebutuhan.</div>
+      </div>
+      <div class="actions">
+        <button class="btn reset" id="resetFilter" type="button">↻ Reset Filter</button>
+        <button class="btn primary" id="savePdf" type="button">⬇ Save to PDF</button>
+        <button class="btn secondary" id="savePpt" type="button">⬇ Save to PPT</button>
+      </div>
+    </div>
     <div class="filters">
       <input id="search" placeholder="Cari nama, NIK, unit, no loker, keterangan..." />
       <select id="fLokasi"><option value="">Semua Lokasi</option></select>
@@ -259,32 +200,44 @@ function renderTable() {
     </tr>`).join('');
   document.getElementById('rowCount').textContent = `Menampilkan ${fmt(filtered.length)} dari ${fmt(DATA.rows.length)} data`;
 }
+function resetFilter() {
+  document.getElementById('search').value = '';
+  document.getElementById('fLokasi').value = '';
+  document.getElementById('fStatus').value = '';
+  document.getElementById('fTipe').value = '';
+  renderTable();
+}
+function saveToPdf() {
+  window.print();
+}
+function saveToPpt() {
+  const total = DATA.kpis.total, used = DATA.kpis.used, unused = DATA.kpis.unused, util = DATA.kpis.util;
+  const floors = DATA.charts.per_lantai.map(x => `<tr><td>${esc(x.label)}</td><td>${fmt(x.used)}</td><td>${fmt(x.unused)}</td><td>${x.util}%</td></tr>`).join('');
+  const units = DATA.charts.unit_top.slice(0,10).map(x => `<tr><td>${esc(x.label)}</td><td>${fmt(x.value)}</td></tr>`).join('');
+  const pptHtml = `
+  <html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:p="urn:schemas-microsoft-com:office:powerpoint" xmlns="http://www.w3.org/TR/REC-html40">
+  <head><meta charset="utf-8"><title>Dashboard Loker IM3 & 3ID</title>
+  <style>
+    body{font-family:Segoe UI,Arial,sans-serif;margin:0;background:#ffffff;color:#111827}.slide{width:1280px;height:720px;padding:54px;box-sizing:border-box;page-break-after:always;background:linear-gradient(135deg,#fff7cc,#ffffff 42%,#eaf3ff)}
+    h1{font-size:44px;margin:0 0 10px;color:#111827}h2{font-size:34px;margin:0 0 24px;color:#111827}.sub{font-size:18px;color:#4b5563}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:38px}.card{background:white;border:1px solid #e5e7eb;border-radius:24px;padding:24px;box-shadow:0 12px 30px rgba(15,23,42,.08)}.label{font-size:16px;color:#6b7280}.value{font-size:46px;font-weight:900;margin-top:8px}.good{color:#10b981}.warn{color:#f59e0b}table{border-collapse:collapse;width:100%;font-size:22px;background:white;border-radius:18px;overflow:hidden}th{background:#111827;color:white;text-align:left}td,th{padding:16px;border-bottom:1px solid #e5e7eb}.footer{position:absolute;bottom:30px;right:54px;color:#6b7280;font-size:15px}
+  </style></head><body>
+    <section class="slide"><h1>Dashboard Data Loker Team IM3 & 3ID</h1><div class="sub">Indosat Ooredoo Hutchison · Gedung Indosat Pandanaran Semarang</div><div class="cards"><div class="card"><div class="label">Total Loker</div><div class="value">${fmt(total)}</div></div><div class="card"><div class="label">Digunakan</div><div class="value good">${fmt(used)}</div></div><div class="card"><div class="label">Belum Digunakan</div><div class="value warn">${fmt(unused)}</div></div><div class="card"><div class="label">Utilisasi</div><div class="value">${util}%</div></div></div><div class="footer">Generated: ${DATA.generated_at}</div></section>
+    <section class="slide"><h2>Utilisasi per Lantai</h2><table><tr><th>Lantai</th><th>Digunakan</th><th>Kosong</th><th>Utilisasi</th></tr>${floors}</table><div class="footer">Dashboard Loker IM3 & 3ID</div></section>
+    <section class="slide"><h2>Top Unit Pemakai Loker</h2><table><tr><th>Unit</th><th>Jumlah</th></tr>${units}</table><div class="footer">Dashboard Loker IM3 & 3ID</div></section>
+  </body></html>`;
+  const blob = new Blob([pptHtml], {type:'application/vnd.ms-powerpoint'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'dashboard_loker_im3_3id.ppt';
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+}
 ['search','fLokasi','fStatus','fTipe'].forEach(id => document.getElementById(id).addEventListener('input', renderTable));
+document.getElementById('resetFilter').addEventListener('click', resetFilter);
+document.getElementById('savePdf').addEventListener('click', saveToPdf);
+document.getElementById('savePpt').addEventListener('click', saveToPpt);
 floorChart(); bars('locationBars', DATA.charts.location, 'green'); bars('unitBars', DATA.charts.unit_top, 'blue'); bars('typeBars', DATA.charts.types, ''); quickSummary(); renderTable();
-</script>
-
-<script>
-(function(){
-  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(prefersReduced) return;
-  document.querySelectorAll('.kpi .value').forEach(el=>{
-    const raw = el.textContent.trim();
-    const isPercent = raw.includes('%');
-    const target = parseFloat(raw.replace(/[^0-9.]/g,''));
-    if(Number.isNaN(target)) return;
-    let start = null;
-    const duration = 900;
-    function tick(ts){
-      if(!start) start = ts;
-      const p = Math.min((ts-start)/duration,1);
-      const eased = 1 - Math.pow(1-p,3);
-      const val = target * eased;
-      el.textContent = isPercent ? val.toFixed(1) + '%' : Math.round(val).toLocaleString('id-ID');
-      if(p < 1) requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-  });
-})();
 </script>
 </body>
 </html>
